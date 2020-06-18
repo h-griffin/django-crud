@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+List
+{% endblock title %}
+
+{% block content %}
+<h3>Tree list</h3>
+
+<ul>{% for tree in object_list %}
+    <li>Tree - <a href="{% url 'tree_details' tree.pk %}">{{ tree.name }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}
+

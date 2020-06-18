@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trees App</title>
+    <link rel='stylesheet' href="{% static 'style.css' %}">
+    <title>
+        {% block title %}
+        Trees
+        {% endblock title %}
+    </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'tree_list' %}"> Tree List </a></li>
+                <li><a href="{% url 'tree_create' %}"> New Tree </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Details
+{% endblock title %}
+
+{% block content %}
+<h1> {{ tree.name }} tree</h3>
+<h5> planted by: {{ tree.planter }}</h5>
+<h5> {{ tree.description }}</h5>
+
+<a href="{% url 'tree_delete' tree.pk %}">delete tree</a> <br>
+<a href="{% url 'tree_update' tree.pk %}">update tree</a>
+{% endblock content %}
+
+
+

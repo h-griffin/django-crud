@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete
+{% endblock title %}
+
+{% block content %}
+<h1>delete view, delete an existing tree</h1>
+
+<form action='' method='POST'>
+    {% csrf_token %} 
+
+    <p>do you want to delete {{ tree.name }}</p>
+
+    <input type='submit' value='OK'>
+</form>
+{% endblock content %}
+
